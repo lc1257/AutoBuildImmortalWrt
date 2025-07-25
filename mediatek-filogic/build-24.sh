@@ -4,10 +4,10 @@ source shell/custom-packages.sh
 
 if [ -n "$CUSTOM_PACKAGES" ]; then
   echo "✅ 你选择了第三方软件包：$CUSTOM_PACKAGES"
-  if [ "$PROFILE" = "glinet_gl-mt3000" ]; then
-    echo "❌ 检查到您集成了第三方软件包 由于mt3000闪存空间较小 不支持此操作"
-    echo "✅ 系统将自动帮你注释掉shell/custom-packages.sh中的插件 目前支持第三方插件集成的机型是mt2500/mt6000等大闪存机型"
-    CUSTOM_PACKAGES=""
+  #if [ "$PROFILE" = "glinet_gl-mt3000" ]; then
+    #echo "❌ 检查到您集成了第三方软件包 由于mt3000闪存空间较小 不支持此操作"
+    #echo "✅ 系统将自动帮你注释掉shell/custom-packages.sh中的插件 目前支持第三方插件集成的机型是mt2500/mt6000等大闪存机型"
+    #CUSTOM_PACKAGES=""
   else
     # 下载 run 文件仓库
     echo "🔄 正在同步第三方软件仓库 Cloning run file repo..."
@@ -67,8 +67,8 @@ PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-package-manager-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
-PACKAGES="$PACKAGES luci-app-openclash"
-PACKAGES="$PACKAGES luci-i18n-homeproxy-zh-cn"
+#PACKAGES="$PACKAGES luci-app-openclash"
+#PACKAGES="$PACKAGES luci-i18n-homeproxy-zh-cn"
 PACKAGES="$PACKAGES openssh-sftp-server"
 # 增加几个必备组件 方便用户安装iStore
 PACKAGES="$PACKAGES fdisk"
